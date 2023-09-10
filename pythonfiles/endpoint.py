@@ -4,7 +4,7 @@ import datetime
 from datetime import date
 # import the required directories
 
-current_utc_time = str(datetime.datetime.utcnow())
+current_utc_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 day = date.today()
 weekday = day.weekday()
 today = day.strftime('%A')
@@ -21,8 +21,8 @@ def request_page():
         'current_day': today,
         'utc_time': current_utc_time,
         'track': 'backend',
-        'github_file_url': '',
-        'github_repo_url': '',
+        'github_file_url': 'https://github.com/Daezee/HNG-stage-1/edit/master/pythonfiles/endpoint.py',
+        'github_repo_url': 'https://github.com/Daezee/HNG-stage-1.git',
         'status_code': 200
     }
     # convert the data to a json format
