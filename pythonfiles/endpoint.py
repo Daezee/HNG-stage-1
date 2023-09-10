@@ -13,7 +13,7 @@ today = day.strftime('%A')
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def request_page():
     user_query = str(request.args.get('slack_name', default="Enter query"))
     user_details = {
